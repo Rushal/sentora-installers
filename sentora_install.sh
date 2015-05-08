@@ -402,6 +402,11 @@ elif [[ "$OS" = "Ubuntu" ]]; then
 
     if [ "$VER" = "14.04" ]; then
         cat > /etc/apt/sources.list <<EOF
+deb http://ports.ubuntu.com/ trusty main restricted universe multiverse
+deb http://ports.ubuntu.com/ trusty-updates main restricted universe multiverse
+deb http://ports.ubuntu.com/ trusty-security main restricted universe multiverse
+deb http://ports.ubuntu.com/ trusty-backports main restricted universe multiverse
+
 #Depots main restricted
 deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main restricted universe multiverse
 deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc)-security main restricted universe multiverse
@@ -409,6 +414,11 @@ deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc)-updates main restricted 
 EOF
     else
         cat > /etc/apt/sources.list <<EOF
+deb http://ports.ubuntu.com/ trusty main restricted universe multiverse
+deb http://ports.ubuntu.com/ trusty-updates main restricted universe multiverse
+deb http://ports.ubuntu.com/ trusty-security main restricted universe multiverse
+deb http://ports.ubuntu.com/ trusty-backports main restricted universe multiverse
+
 #Depots main restricted
 deb http://archive.ubuntu.com/ubuntu/ $(lsb_release -sc) main restricted
 deb http://security.ubuntu.com/ubuntu $(lsb_release -sc)-security main restricted
